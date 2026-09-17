@@ -1,0 +1,105 @@
+{
+  "formulas": [
+    {
+      "id": "f1",
+      "title": "Mật độ dân số",
+      "formula": "Mật độ dân số (người/km²) = Số dân (người) / Diện tích (km²)",
+      "example": "Năm 2024, diện tích 331 344 km², số dân 100 triệu người => Mật độ = 100 000 000 / 331 344 ≈ 301,8 người/km².",
+      "rounding": "Làm tròn đến 1 chữ số thập phân."
+    },
+    {
+      "id": "f2",
+      "title": "Tỉ trọng / Cơ cấu (%)",
+      "formula": "Tỉ trọng ngành A (%) = (Giá trị ngành A / Tổng giá trị) × 100%",
+      "example": "Tổng sản lượng 100 triệu tấn, Nông nghiệp 25 triệu tấn => Tỉ trọng = (25 / 100) × 100 = 25,0%.",
+      "rounding": "Làm tròn đến 1 chữ số thập phân của %."
+    },
+    {
+      "id": "f3",
+      "title": "Tốc độ tăng trưởng / Tỉ lệ tăng (%)",
+      "formula": "Tỉ lệ tăng (%) = [(Giá trị năm sau - Giá trị năm trước) / Giá trị năm trước] × 100%",
+      "example": "Năm 2010 đạt 50 tỉ USD, năm 2024 đạt 120 tỉ USD => Tỉ lệ tăng = [(120 - 50) / 50] × 100 = 140,0%.",
+      "rounding": "Làm tròn đến 1 chữ số thập phân."
+    },
+    {
+      "id": "f4",
+      "title": "Chênh lệch kinh độ / vĩ độ",
+      "formula": "Chênh lệch (độ, phút) = Tọa độ điểm cực Bắc/Đông - Tọa độ điểm cực Nam/Tây",
+      "example": "Cực Bắc 23°23′B, cực Nam 8°34′B => Chênh lệch vĩ độ = 23°23′ - 8°34′ = 14°49′.",
+      "rounding": "Ghi đúng số độ (°) và số phút (′)."
+    },
+    {
+      "id": "f5",
+      "title": "Bán kính đường tròn biểu đồ (R)",
+      "formula": "R₂ = R₁ × √(Tổng quy mô năm 2 / Tổng quy mô năm 1)",
+      "example": "Nếu R₁ = 2.0 cm, quy mô năm 2 gấp 2.25 lần năm 1 => R₂ = 2.0 × √2.25 = 3.0 cm.",
+      "rounding": "Làm tròn đến 1 chữ số thập phân."
+    }
+  ],
+  "grade_summaries": [
+    {
+      "grade": 6,
+      "subject": "Lịch Sử & Địa Lý 6",
+      "topics": [
+        {
+          "title": "Bài 1. Vị trí Trái Đất và Hệ Mặt Trời",
+          "content": "Trái Đất nằm ở vị trí thứ 3 theo thứ tự khoảng cách xa dần Mặt Trời. Hình dạng hình cầu, tự quay quanh trục sinh ra ngày và đêm."
+        },
+        {
+          "title": "Bài 2. Nguồn gốc loài người & Xã hội nguyên thủy",
+          "content": "Quá trình tiến hóa từ Vượn người -> Người khéo léo -> Người đứng thẳng -> Người tinh khôn. Công cụ lao động từ đá thô thô sơ chuyển sang đá mài, kim loại."
+        }
+      ]
+    },
+    {
+      "grade": 7,
+      "subject": "Lịch Sử & Địa Lý 7",
+      "topics": [
+        {
+          "title": "Bài 1. Vị trí địa lí & Đặc điểm tự nhiên Châu Âu",
+          "content": "Châu Âu nằm ở phía tây lục địa Á - Âu. Khí hậu chủ yếu ôn đới hải dương và ôn đới lục địa. Mạng lưới sông ngòi phát triển (sông Đa-ni-úp, sông Vôn-ga)."
+        },
+        {
+          "title": "Bài 2. Các đại dương trên Trái Đất",
+          "content": "Trái Đất có 5 đại dương lớn: Thái Bình Dương (lớn nhất), Đại Tây Dương, Ấn Độ Dương, Bắc Băng Dương, Nam Đại Dương."
+        }
+      ]
+    },
+    {
+      "grade": 8,
+      "subject": "Lịch Sử & Địa Lý 8",
+      "topics": [
+        {
+          "title": "Bài 1. Vị trí địa lí & Phạm vi lãnh thổ Việt Nam",
+          "content": "Nằm ở rìa phía đông bán đảo Đông Dương, trung tâm khu vực Đông Nam Á. Tọa độ đất liền: vĩ độ 8°34′B - 23°23′B, kinh độ 102°09′Đ - 109°28′Đ. Vùng biển rộng khoảng 1 triệu km² với hơn 4 000 hòn đảo lớn nhỏ."
+        },
+        {
+          "title": "Bài 2. Địa hình Việt Nam",
+          "content": "Đồi núi chiếm 3/4 diện tích đất liền, đồng bằng chiếm 1/4. Hướng địa hình chính: Tây Bắc - Đông Nam và hướng vòng cung."
+        },
+        {
+          "title": "Bài 3. Khí hậu Việt Nam",
+          "content": "Khí hậu nhiệt đới ẩm gió mùa, có sự phân hóa đa dạng theo bắc - nam và theo độ cao."
+        }
+      ]
+    },
+    {
+      "grade": 9,
+      "subject": "Lịch Sử & Địa Lý 9",
+      "topics": [
+        {
+          "title": "Bài 1. Dân tộc & Dân số Việt Nam",
+          "content": "Việt Nam có 54 dân tộc anh em. Người Kinh chiếm khoảng 85% dân số (năm 2024), phân bố chủ yếu ở đồng bằng, ven biển. Quy mô dân số đạt 100 triệu người (2024)."
+        },
+        {
+          "title": "Bài 2. Nông nghiệp Việt Nam",
+          "content": "Nông nghiệp phát triển theo hướng sản xuất hàng hóa, ứng dụng công nghệ cao. Hai vùng trọng điểm lúa lớn nhất là Đồng bằng sông Cửu Long và Đồng bằng sông Hồng."
+        },
+        {
+          "title": "Bài 3. Các vùng kinh tế trọng điểm",
+          "content": "7 vùng kinh tế: Trung du và miền núi phía Bắc, Đồng bằng sông Hồng, Bắc Trung Bộ, Duyên hải Nam Trung Bộ, Tây Nguyên, Đông Nam Bộ, Đồng bằng sông Cửu Long."
+        }
+      ]
+    }
+  ]
+}
