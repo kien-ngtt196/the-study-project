@@ -1,6 +1,6 @@
 # 🎓 Hệ Thống Học Tập, Ôn Luyện & Đấu Trường Lớp Học Lịch Sử & Địa Lý THCS
 
-> **Chương trình Giáo Dục Phổ Thông THCS (Lớp 6, 7, 8, 9) • Chuẩn Đổi Mới Ma Trận Đề Thi 2026-2027**
+> **Chương trình Giáo Dục Phổ Thông THCS (Lớp 8, 9) • Chuẩn Đổi Mới Ma Trận Đề Thi 2026-2027**
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -13,7 +13,7 @@
 
 ## 🌟 Giới Thiệu Tổng Quan
 
-**Ứng dụng Ôn luyện & Đấu trường Lớp học Lịch Sử & Địa Lý THCS** là giải pháp công nghệ giáo dục hiện đại, phục vụ giảng dạy tương tác trên lớp cho Giáo viên và ôn luyện hiệu quả cho Học sinh từ Lớp 6 đến Lớp 9.
+**Ứng dụng Ôn luyện & Đấu trường Lớp học Lịch Sử & Địa Lý THCS** là giải pháp công nghệ giáo dục hiện đại, phục vụ giảng dạy tương tác trên lớp cho Giáo viên và ôn luyện hiệu quả cho Học sinh Lớp 8 và Lớp 9.
 
 Ứng dụng được thiết kế theo phong cách giao diện **Glassmorphism truyền thống kết hợp hiện đại**, tích hợp công nghệ **kết nối thời gian thực WebRTC qua Mã QR** giúp học sinh tham gia thi đấu từ điện thoại di động mà **không cần cài đặt phần mềm** hay **cùng mạng Wi-Fi**.
 
@@ -46,7 +46,7 @@
 
 ### 📊 4. Báo Cáo Tiến Độ & Streak Học Tập
 - Tự động ghi nhớ câu hỏi chưa làm đúng để luyện tập lại.
-- Thống kê tỉ lệ đúng chi tiết theo từng khối lớp (Lớp 6, 7, 8, 9).
+- Thống kê tỉ lệ đúng chi tiết theo từng khối lớp (Lớp 8, 9).
 - Theo dõi chuỗi ngày học tập đều đặn (Streak Days).
 
 ---

@@ -43,65 +43,9 @@ export const App: React.FC = () => {
     sounds.setSoundEnabled(soundEnabled);
   }, [soundEnabled]);
 
-  // Get current topics based on active grade
-  const currentTopics: LessonTopic[] = React.useMemo(() => {
-    if (activeGrade === 8) return geo8Data as unknown as LessonTopic[];
-    if (activeGrade === 9) return geo9Data as unknown as LessonTopic[];
-
-    // Fallback topics for Grade 6 & Grade 7 using curated sample sets
-    return [
-      {
-        id: `g${activeGrade}_fallback_l1`,
-        title: `Bài 1. Vị trí và Khái quát Lớp ${activeGrade}`,
-        grade: activeGrade,
-        mcq_questions: [
-          {
-            id: `g${activeGrade}_mcq_1`,
-            num: 1,
-            type: 'mcq',
-            question: `Đặc điểm tự nhiên nổi bật được học trong chương trình Lớp ${activeGrade} là gì?`,
-            difficulty: 'Nhận biết',
-            options: [
-              'A. Khí hậu nhiệt đới ẩm gió mùa',
-              'B. Khí hậu ôn đới lục địa',
-              'C. Khí hậu hoang mạc khô hạn',
-              'D. Khí hậu băng giá quanh năm'
-            ],
-            answer: 'A',
-            explanation: 'Chương trình Lịch Sử và Địa Lý THCS tập trung nghiên cứu đặc điểm tự nhiên, khí hậu nhiệt đới ẩm gió mùa và địa lý Việt Nam.'
-          }
-        ],
-        tf_questions: [
-          {
-            id: `g${activeGrade}_tf_1`,
-            num: 1,
-            type: 'true_false',
-            context: `Ngữ liệu bài học Lớp ${activeGrade}: Lịch sử và Địa lý cung cấp kiến thức nền tảng về tự nhiên, dân cư và lịch sử dân tộc.`,
-            difficulty: 'Thông hiểu',
-            statements: [
-              { key: 'a', statement: 'Môn học giúp học sinh hiểu rõ vị trí địa lý Việt Nam.', answer: 'Đ' },
-              { key: 'b', statement: 'Việt Nam nằm ở khu vực Nam Mỹ.', answer: 'S' },
-              { key: 'c', statement: 'Bản đồ là công cụ quan trọng trong học tập Địa lý.', answer: 'Đ' },
-              { key: 'd', statement: 'Khí hậu Việt Nam mang tính chất nhiệt đới.', answer: 'Đ' }
-            ],
-            explanation: 'Dựa trên nội dung SGK Lịch sử & Địa lý THCS.'
-          }
-        ],
-        sa_questions: [
-          {
-            id: `g${activeGrade}_sa_1`,
-            num: 1,
-            type: 'short_answer',
-            question: `Hãy cho biết số lượng tỉnh và thành phố trực thuộc Trung ương của Việt Nam hiện nay?`,
-            instruction: 'Nhập số nguyên.',
-            difficulty: 'Vận dụng',
-            answer: '63',
-            explanation: 'Việt Nam hiện có 63 tỉnh và thành phố trực thuộc Trung ương.'
-          }
-        ]
-      }
-    ];
-  }, [activeGrade]);
+  const currentTopics: LessonTopic[] = activeGrade === 8
+    ? geo8Data as unknown as LessonTopic[]
+    : geo9Data as unknown as LessonTopic[];
 
   const handleAnswerSubmit = (isCorrect: boolean, questionId: string) => {
     const updated = recordAnswer(activeGrade, isCorrect, questionId);
@@ -192,7 +136,7 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500 bg-slate-950">
-        <p>Hệ thống Học tập & Ôn Luyện Lịch Sử & Địa Lý THCS (Lớp 6, 7, 8, 9) • Chương Trình GDPT 2026-2027</p>
+        <p>Hệ thống Học tập & Ôn Luyện Lịch Sử & Địa Lý THCS (Lớp 8, 9) • Chương Trình GDPT 2026-2027</p>
       </footer>
     </div>
   );

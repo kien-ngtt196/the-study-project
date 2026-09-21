@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { GradeLevel, LessonTopic, QuestionItem } from '../types/quiz';
+import { GRADE_LEVELS, GradeLevel, LessonTopic, QuestionItem } from '../types/quiz';
 import { QuizCard } from './QuizCard';
 import { BookOpen, Filter, CheckCircle, RotateCcw, AlertTriangle, Sparkles, ChevronRight, Search } from 'lucide-react';
 import { sounds } from '../utils/audio';
@@ -128,7 +128,7 @@ export const StudyMode: React.FC<StudyModeProps> = ({
             {/* Contextual Grade Switcher */}
             {onSelectGrade && (
               <div className="flex items-center gap-1 p-1 bg-[#06181e] rounded-xl border border-[#D4AF37]/30">
-                {([6, 7, 8, 9] as GradeLevel[]).map((g) => (
+                {GRADE_LEVELS.map((g) => (
                   <button
                     key={g}
                     onClick={() => {

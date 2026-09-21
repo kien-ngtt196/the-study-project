@@ -107,8 +107,8 @@ export const LandingHome: React.FC<LandingHomeProps> = ({
                 <Layers className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-sm font-bold text-white font-sans-vn">Đủ 4 Khối Lớp</div>
-                <div className="text-[11px] text-[#E8D8C8]/70">Lớp 6, 7, 8, 9</div>
+                <div className="text-sm font-bold text-white font-sans-vn">Tập Trung 2 Khối Lớp</div>
+                <div className="text-[11px] text-[#E8D8C8]/70">Lớp 8 và Lớp 9</div>
               </div>
             </div>
 
@@ -177,7 +177,7 @@ export const LandingHome: React.FC<LandingHomeProps> = ({
                 Ngân Hàng Câu Hỏi Lịch Sử & Địa Lý Phân Hóa
               </h3>
               <p className="text-sm text-[#E8D8C8]/85 font-sans-vn leading-relaxed max-w-2xl">
-                Từng bài học được biên soạn kĩ lưỡng theo chương trình SGK mới Lớp 6, 7, 8, 9. Tích hợp giải thích chi tiết, gợi ý kiến thức và lưu trữ các câu hỏi chưa đúng để rèn luyện lại.
+                Từng bài học được biên soạn kĩ lưỡng theo chương trình SGK mới Lớp 8 và Lớp 9. Tích hợp giải thích chi tiết, gợi ý kiến thức và lưu trữ các câu hỏi chưa đúng để rèn luyện lại.
               </p>
             </div>
 
@@ -290,10 +290,8 @@ export const LandingHome: React.FC<LandingHomeProps> = ({
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {[
-            { grade: 6, title: 'Lịch Sử & Địa Lý 6', desc: 'Trái Đất, Bản đồ, Khái quát Địa lý Tự nhiên & Lịch sử Cổ đại', color: 'from-[#1B4D3E] to-[#0F3B46]' },
-            { grade: 7, title: 'Lịch Sử & Địa Lý 7', desc: 'Địa lý các Châu lục & Lịch sử Việt Nam thời Phong kiến (thế kỷ X-XVI)', color: 'from-[#0F3B46] to-[#1E3A8A]' },
             { grade: 8, title: 'Lịch Sử & Địa Lý 8', desc: 'Tự nhiên Việt Nam, Biển Đông, Thổ nhưỡng & Lịch sử thời Nguyễn', color: 'from-[#1B4D3E] to-[#D4AF37]/30' },
             { grade: 9, title: 'Lịch Sử & Địa Lý 9', desc: 'Địa lý Kinh tế - Xã hội Việt Nam & Lịch sử Việt Nam Hiện đại', color: 'from-[#D4AF37]/20 to-[#1B4D3E]' },
           ].map((item) => {

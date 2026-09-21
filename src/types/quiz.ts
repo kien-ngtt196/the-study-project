@@ -1,4 +1,6 @@
-export type GradeLevel = 6 | 7 | 8 | 9;
+export const GRADE_LEVELS = [8, 9] as const;
+
+export type GradeLevel = (typeof GRADE_LEVELS)[number];
 
 export type QuestionType = 'mcq' | 'true_false' | 'short_answer';
 
@@ -94,4 +96,3 @@ export interface TeamInfo {
 }
 
 export type ActiveTab = 'home' | 'study' | 'exam' | 'game' | 'analytics';
-

@@ -38,34 +38,6 @@
   ],
   "grade_summaries": [
     {
-      "grade": 6,
-      "subject": "Lịch Sử & Địa Lý 6",
-      "topics": [
-        {
-          "title": "Bài 1. Vị trí Trái Đất và Hệ Mặt Trời",
-          "content": "Trái Đất nằm ở vị trí thứ 3 theo thứ tự khoảng cách xa dần Mặt Trời. Hình dạng hình cầu, tự quay quanh trục sinh ra ngày và đêm."
-        },
-        {
-          "title": "Bài 2. Nguồn gốc loài người & Xã hội nguyên thủy",
-          "content": "Quá trình tiến hóa từ Vượn người -> Người khéo léo -> Người đứng thẳng -> Người tinh khôn. Công cụ lao động từ đá thô thô sơ chuyển sang đá mài, kim loại."
-        }
-      ]
-    },
-    {
-      "grade": 7,
-      "subject": "Lịch Sử & Địa Lý 7",
-      "topics": [
-        {
-          "title": "Bài 1. Vị trí địa lí & Đặc điểm tự nhiên Châu Âu",
-          "content": "Châu Âu nằm ở phía tây lục địa Á - Âu. Khí hậu chủ yếu ôn đới hải dương và ôn đới lục địa. Mạng lưới sông ngòi phát triển (sông Đa-ni-úp, sông Vôn-ga)."
-        },
-        {
-          "title": "Bài 2. Các đại dương trên Trái Đất",
-          "content": "Trái Đất có 5 đại dương lớn: Thái Bình Dương (lớn nhất), Đại Tây Dương, Ấn Độ Dương, Bắc Băng Dương, Nam Đại Dương."
-        }
-      ]
-    },
-    {
       "grade": 8,
       "subject": "Lịch Sử & Địa Lý 8",
       "topics": [

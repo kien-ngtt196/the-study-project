@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { GradeLevel, LessonTopic, QuestionItem, MCQQuestion, TrueFalseQuestion, ShortAnswerQuestion, ExamResult } from '../types/quiz';
+import { GRADE_LEVELS, GradeLevel, LessonTopic, QuestionItem, MCQQuestion, TrueFalseQuestion, ShortAnswerQuestion, ExamResult } from '../types/quiz';
 import { Award, Clock, AlertTriangle, CheckCircle2, Flag, Send, RotateCcw, Trophy, FileText, ChevronRight, HelpCircle } from 'lucide-react';
 import { sounds } from '../utils/audio';
 
@@ -220,7 +220,7 @@ export const ExamMode: React.FC<ExamModeProps> = ({ grade, topics, onFinishExam,
                 
                 {onSelectGrade && (
                   <div className="flex items-center gap-1 p-0.5 bg-[#06181e]/90 rounded-lg border border-[#D4AF37]/40 backdrop-blur-md">
-                    {([6, 7, 8, 9] as GradeLevel[]).map((g) => (
+                    {GRADE_LEVELS.map((g) => (
                       <button
                         key={g}
                         onClick={() => {

@@ -2,31 +2,83 @@ import { UserStats, ExamResult, GradeLevel } from '../types/quiz';
 
 const STORAGE_KEY = 'the_study_app_user_stats_v1';
 
-const defaultStats: UserStats = {
+const createDefaultStats = (): UserStats => ({
   totalAnswered: 0,
   totalCorrect: 0,
   streakDays: 1,
   lastStudyDate: new Date().toISOString().split('T')[0],
   gradeAccuracy: {
-    6: { total: 0, correct: 0 },
-    7: { total: 0, correct: 0 },
     8: { total: 0, correct: 0 },
     9: { total: 0, correct: 0 },
   },
   bookmarkedQuestionIds: [],
   wrongQuestionIds: [],
   examHistory: [],
+});
+
+const sanitizeCounter = (value: unknown): { total: number; correct: number } => {
+  if (!value || typeof value !== 'object') return { total: 0, correct: 0 };
+  const counter = value as { total?: unknown; correct?: unknown };
+  const total = typeof counter.total === 'number' && counter.total >= 0 ? counter.total : 0;
+  const correct = typeof counter.correct === 'number' && counter.correct >= 0
+    ? Math.min(counter.correct, total)
+    : 0;
+  return { total, correct };
+};
+
+const isSupportedQuestionId = (value: unknown): value is string => (
+  typeof value === 'string' && /^g(?:8|9)_/.test(value)
+);
+
+const isSupportedExam = (value: unknown): value is ExamResult => {
+  if (!value || typeof value !== 'object') return false;
+  const grade = (value as { grade?: unknown }).grade;
+  return grade === 8 || grade === 9;
+};
+
+const sanitizeStoredStats = (value: unknown): UserStats => {
+  const defaults = createDefaultStats();
+  if (!value || typeof value !== 'object') return defaults;
+
+  const stored = value as Partial<UserStats>;
+  const grade8 = sanitizeCounter(stored.gradeAccuracy?.[8]);
+  const grade9 = sanitizeCounter(stored.gradeAccuracy?.[9]);
+
+  return {
+    totalAnswered: grade8.total + grade9.total,
+    totalCorrect: grade8.correct + grade9.correct,
+    streakDays: typeof stored.streakDays === 'number' && stored.streakDays >= 0
+      ? stored.streakDays
+      : defaults.streakDays,
+    lastStudyDate: typeof stored.lastStudyDate === 'string'
+      ? stored.lastStudyDate
+      : defaults.lastStudyDate,
+    gradeAccuracy: {
+      8: grade8,
+      9: grade9,
+    },
+    bookmarkedQuestionIds: Array.isArray(stored.bookmarkedQuestionIds)
+      ? stored.bookmarkedQuestionIds.filter(isSupportedQuestionId)
+      : [],
+    wrongQuestionIds: Array.isArray(stored.wrongQuestionIds)
+      ? stored.wrongQuestionIds.filter(isSupportedQuestionId)
+      : [],
+    examHistory: Array.isArray(stored.examHistory)
+      ? stored.examHistory.filter(isSupportedExam).slice(0, 30)
+      : [],
+  };
 };
 
 export const getStoredStats = (): UserStats => {
-  if (typeof window === 'undefined') return defaultStats;
+  if (typeof window === 'undefined') return createDefaultStats();
   try {
     const data = localStorage.getItem(STORAGE_KEY);
-    if (!data) return defaultStats;
-    const parsed = JSON.parse(data);
-    return { ...defaultStats, ...parsed };
+    if (!data) return createDefaultStats();
+    const sanitized = sanitizeStoredStats(JSON.parse(data));
+    saveStats(sanitized);
+    return sanitized;
   } catch {
-    return defaultStats;
+    return createDefaultStats();
   }
 };
 
@@ -106,5 +158,5 @@ export const resetAllProgress = (): UserStats => {
   if (typeof window !== 'undefined') {
     localStorage.removeItem(STORAGE_KEY);
   }
-  return defaultStats;
+  return createDefaultStats();
 };

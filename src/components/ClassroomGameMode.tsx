@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GradeLevel, LessonTopic, QuestionItem, TeamInfo, MCQQuestion, TrueFalseQuestion, ShortAnswerQuestion } from '../types/quiz';
+import { GRADE_LEVELS, GradeLevel, LessonTopic, QuestionItem, TeamInfo, MCQQuestion, TrueFalseQuestion, ShortAnswerQuestion } from '../types/quiz';
 import { mpNetwork, Player } from '../utils/multiplayer';
 import { QRCodeSVG } from 'qrcode.react';
 import { Swords, Trophy, Users, Play, Clock, Sparkles, Plus, Minus, RotateCcw, Volume2, HelpCircle, ChevronRight, Eye, QrCode, Smartphone, CheckCircle2 } from 'lucide-react';
@@ -414,7 +414,7 @@ export const ClassroomGameMode: React.FC<ClassroomGameModeProps> = ({ grade, top
                   3. Khối Lớp Thi Đấu
                 </label>
                 <div className="flex items-center gap-1">
-                  {([6, 7, 8, 9] as GradeLevel[]).map((g) => (
+                  {GRADE_LEVELS.map((g) => (
                     <button
                       key={g}
                       type="button"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserStats, GradeLevel } from '../types/quiz';
+import { GRADE_LEVELS, UserStats } from '../types/quiz';
 import { BarChart3, Trophy, Target, Flame, RotateCcw, Award, CheckCircle2, AlertTriangle, ArrowUpRight } from 'lucide-react';
 import { resetAllProgress } from '../utils/storage';
 import { sounds } from '../utils/audio';
@@ -95,7 +95,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ stats, o
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {([6, 7, 8, 9] as GradeLevel[]).map((g) => {
+            {GRADE_LEVELS.map((g) => {
               const gradeData = stats.gradeAccuracy[g] || { total: 0, correct: 0 };
               const acc = gradeData.total > 0 ? Math.round((gradeData.correct / gradeData.total) * 100) : 0;
 
